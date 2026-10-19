@@ -52,7 +52,7 @@ function playBeep(type) {
         oscillator.type = 'sine';
         oscillator.frequency.setValueAtTime(800, audioCtx.currentTime);
         oscillator.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.1);
-        gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gainNode.gain.setValueAtTime(1.0, audioCtx.currentTime);
         gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
         oscillator.start();
         oscillator.stop(audioCtx.currentTime + 0.2);
@@ -60,7 +60,7 @@ function playBeep(type) {
         oscillator.type = 'sawtooth';
         oscillator.frequency.setValueAtTime(300, audioCtx.currentTime);
         oscillator.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.2);
-        gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gainNode.gain.setValueAtTime(1.0, audioCtx.currentTime);
         gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
         oscillator.start();
         oscillator.stop(audioCtx.currentTime + 0.3);
