@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>España Mana</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="icon.png">
 </head>
 <body>
     <div id="app">
@@ -19,20 +18,19 @@
         <!-- Main Game Area -->
         <main id="game-screen">
             <div class="card-container">
+                <button id="btn-speak" class="action-btn icon-btn">🔊</button>
                 <div id="word-display" class="glowing-text">Cargando...</div>
-                <div id="meaning-display" class="hidden"></div>
-            </div>
-
-            <div class="controls">
-                <button id="btn-speak" class="action-btn">🔊 Escuchar</button>
                 
-                <div id="initial-actions">
-                    <button id="btn-show-answer" class="primary-btn">Show Answer</button>
+                <!-- 4 Multiple Choice Buttons Container -->
+                <div id="quiz-options" class="quiz-grid">
+                    <!-- Buttons injected via JS -->
                 </div>
 
-                <div id="feedback-actions" class="hidden">
-                    <button id="btn-incorrect" class="danger-btn">Incorrect</button>
-                    <button id="btn-correct" class="success-btn">Correct</button>
+                <!-- Answer Reveal View -->
+                <div id="answer-view" class="hidden">
+                    <div id="meaning-display"></div>
+                    <p class="status-msg" id="status-msg"></p>
+                    <button id="btn-next" class="primary-btn mt-20">Siguiente (Next) ➔</button>
                 </div>
             </div>
         </main>
